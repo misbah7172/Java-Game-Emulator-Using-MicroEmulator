@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device name="Custom320x240" manufacturer="Custom">
+    <screen>
+        <width>320</width>
+        <height>240</height>
+        <bitDepth>16</bitDepth>
+        <isColor>true</isColor>
+    </screen>
+    <input>
+        <key name="SOFT1" code="-6"/>
+        <key name="SOFT2" code="-7"/>
+        <key name="UP" code="-1"/>
+        <key name="DOWN" code="-2"/>
+        <key name="LEFT" code="-3"/>
+        <key name="RIGHT" code="-4"/>
+        <key name="FIRE" code="-5"/>
+        <key name="NUM0" code="48"/>
+        <key name="NUM1" code="49"/>
+        <key name="NUM2" code="50"/>
+        <key name="NUM3" code="51"/>
+        <key name="NUM4" code="52"/>
+        <key name="NUM5" code="53"/>
+        <key name="NUM6" code="54"/>
+        <key name="NUM7" code="55"/>
+        <key name="NUM8" code="56"/>
+        <key name="NUM9" code="57"/>
+        <key name="STAR" code="42"/>
+        <key name="POUND" code="35"/>
+    </input>
+</device> 
