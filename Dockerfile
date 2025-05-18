@@ -23,11 +23,15 @@ WORKDIR /app
 RUN mkdir -p /app/emulator
 COPY microemulator-2.0.4/microemulator.jar /app/emulator/microemulator.jar
 
+# Copy Nokia UI libraries
+COPY microemulator-2.0.4/lib/microemu-nokiaui.jar /app/emulator/lib/
+COPY microemulator-2.0.4/lib/microemu-siemensapi.jar /app/emulator/lib/
+
 # Copy custom device profile
 COPY Custom320x240.xml /app/Custom320x240.xml
 
 # Create emulator launcher script
-RUN echo '#!/bin/sh\njava -jar /app/emulator/microemulator.jar "$@"' > /app/run_emulator.sh && \
+RUN echo '#!/bin/sh\njava -cp "/app/emulator/microemulator.jar:/app/emulator/lib/*" org.microemu.app.Main "$@"' > /app/run_emulator.sh && \
     chmod +x /app/run_emulator.sh
 
 # Create sample JAR games directory
